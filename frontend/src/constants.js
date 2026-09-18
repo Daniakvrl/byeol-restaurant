@@ -24,7 +24,7 @@ export const LOCAL_STORAGE_KEYS = {
 };
 
 // API base URL
-export const API_BASE = 'http://localhost:8080';
+export const API_BASE = 'https://byeol-restaurant.onrender.com';
 
 // Button labels
 export const BUTTON_LABELS = {
