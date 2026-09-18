@@ -1,0 +1,1315 @@
+
+/* =========================================================
+   BYEOL — MENU
+   Style élégant, sombre et doré
+   Animation + barre Commander fixe
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEUR PRINCIPAL
+   ========================================================= */
+
+.menu-container {
+    display: flex;
+    min-height: 100vh;
+
+    background: #0a0a0a;
+
+    font-family: 'Inter', sans-serif;
+    color: #F5F3EF;
+}
+
+
+/* =========================================================
+   ZONE DU MENU
+   ========================================================= */
+
+.menu-items {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 40px 360px 40px 48px;
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 168, 106, 0.35) transparent;
+}
+
+
+/* =========================================================
+   INDICATION TABLE
+   ========================================================= */
+
+.menu-table-label {
+    color: rgba(245, 243, 239, 0.4);
+
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin: 0 0 8px;
+
+    animation: byeolFadeDown 0.8s ease forwards;
+}
+
+
+/* =========================================================
+   CATÉGORIE
+   ========================================================= */
+
+.menu-category {
+    margin-bottom: 48px;
+
+    animation: byeolCategoryAppear 0.8s ease both;
+}
+
+.menu-category:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+.menu-category:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.menu-category:nth-child(3) {
+    animation-delay: 0.40s;
+}
+
+.menu-category:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+
+/* =========================================================
+   TITRE CATÉGORIE
+   ========================================================= */
+
+.menu-category-title {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-weight: 300;
+    font-style: italic;
+
+    font-size: 34px;
+
+    color: #F5F3EF;
+
+    margin: 0 0 28px;
+
+    position: relative;
+
+    animation: byeolTitleAppear 0.9s ease both;
+}
+
+.menu-category-title::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    margin-top: 12px;
+
+    background: #C9A86A;
+
+    transform-origin: left;
+
+    animation: byeolGoldLine 1s ease both;
+}
+
+
+/* =========================================================
+   GRILLE DES PLATS
+   ========================================================= */
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(180px, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARTE PLAT
+   ========================================================= */
+
+.menu-item-card {
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    animation: byeolMenuItemAppear 0.7s ease forwards;
+}
+
+
+/* Apparition progressive */
+
+.menu-item-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.menu-item-card:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.menu-item-card:nth-child(3) {
+    animation-delay: 0.19s;
+}
+
+.menu-item-card:nth-child(4) {
+    animation-delay: 0.26s;
+}
+
+.menu-item-card:nth-child(5) {
+    animation-delay: 0.33s;
+}
+
+.menu-item-card:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+.menu-item-card:nth-child(7) {
+    animation-delay: 0.47s;
+}
+
+.menu-item-card:nth-child(8) {
+    animation-delay: 0.54s;
+}
+
+.menu-item-card:nth-child(9) {
+    animation-delay: 0.61s;
+}
+
+.menu-item-card:nth-child(10) {
+    animation-delay: 0.68s;
+}
+
+.menu-item-card:nth-child(11) {
+    animation-delay: 0.75s;
+}
+
+.menu-item-card:nth-child(12) {
+    animation-delay: 0.82s;
+}
+
+
+/* =========================================================
+   IMAGE DU PLAT
+   ========================================================= */
+
+.menu-item-image-wrap {
+    width: 100%;
+    height: 120px;
+
+    border-radius: 2px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            160deg,
+            #2e2313 0%,
+            #14100b 100%
+        );
+
+    margin-bottom: 14px;
+
+    position: relative;
+
+    border: 1px solid transparent;
+
+    transition:
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.menu-item-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.8s ease;
+}
+
+
+/* Zoom élégant au survol */
+
+.menu-item-card:hover .menu-item-image {
+    transform: scale(1.06);
+
+    filter: brightness(1.08);
+}
+
+.menu-item-card:hover .menu-item-image-wrap {
+    border-color:
+        rgba(201, 168, 106, 0.45);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   NOM DU PLAT
+   ========================================================= */
+
+.menu-item-name {
+    font-size: 14px;
+
+    color: #F5F3EF;
+
+    line-height: 1.4;
+
+    margin-bottom: 6px;
+
+    transition: color 0.3s ease;
+}
+
+.menu-item-card:hover .menu-item-name {
+    color: #dfc68d;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.menu-item-description {
+    font-size: 11px;
+
+    color: rgba(245, 243, 239, 0.45);
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+    max-height: 34px;
+
+    overflow-y: auto;
+
+    padding-right: 4px;
+}
+
+.menu-item-description::-webkit-scrollbar {
+    width: 3px;
+}
+
+.menu-item-description::-webkit-scrollbar-thumb {
+    background:
+        rgba(201, 168, 106, 0.4);
+
+    border-radius: 2px;
+}
+
+.menu-item-description::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* =========================================================
+   PIED DU PLAT
+   ========================================================= */
+
+.menu-item-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   PRIX
+   ========================================================= */
+
+.menu-item-price {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-style: italic;
+
+    font-size: 14px;
+
+    color: #C9A86A;
+
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+.menu-item-card:hover .menu-item-price {
+    color: #dfc68d;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   QUANTITÉ
+   ========================================================= */
+
+.quantity-control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border:
+        0.5px solid rgba(245, 243, 239, 0.25);
+
+    padding: 4px 10px;
+
+    transition:
+        border-color 0.3s ease;
+}
+
+.menu-item-card:hover .quantity-control {
+    border-color:
+        rgba(201, 168, 106, 0.55);
+}
+
+.quantity-btn {
+    background: none;
+
+    border: none;
+
+    color: #F5F3EF;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    padding: 0;
+
+    width: 12px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.quantity-btn:hover {
+    color: #C9A86A;
+
+    transform: scale(1.2);
+}
+
+.quantity-display {
+    color: #F5F3EF;
+
+    font-size: 12px;
+
+    min-width: 10px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.menu-status-message,
+.menu-error-message {
+    color:
+        rgba(245, 243, 239, 0.5);
+
+    font-size: 13px;
+
+    text-align: center;
+
+    padding: 40px 0;
+
+    animation:
+        byeolFadeIn 0.8s ease forwards;
+}
+
+.menu-error-message {
+    color: #d98a6b;
+}
+
+
+/* =========================================================
+   BARRE COMMANDER
+   FIXÉE EN HAUT À DROITE
+   ========================================================= */
+
+.menu-cart {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 320px;
+
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(17, 17, 17, 0.97);
+
+    border-left:
+        0.5px solid rgba(245, 243, 239, 0.1);
+
+    padding: 40px 32px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    z-index: 50;
+
+    overflow-y: auto;
+
+    backdrop-filter: blur(8px);
+
+    animation:
+        byeolCartAppear 0.8s ease forwards;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(201, 168, 106, 0.35)
+        transparent;
+}
+
+
+/* =========================================================
+   TITRE COMMANDER
+   ========================================================= */
+
+.menu-cart-title {
+    color: #F5F3EF;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin: 0 0 8px;
+}
+
+
+/* =========================================================
+   LIGNE DORÉE
+   ========================================================= */
+
+.menu-cart-divider {
+    width: 24px;
+
+    height: 0.5px;
+
+    background:
+        rgba(201, 168, 106, 0.6);
+
+    margin-bottom: 32px;
+
+    transform-origin: left;
+
+    animation:
+        byeolGoldLine 0.8s ease forwards;
+}
+
+
+/* =========================================================
+   ARTICLES PANIER
+   ========================================================= */
+
+.menu-cart-items {
+    margin-bottom: 24px;
+}
+
+.empty-cart-text {
+    color:
+        rgba(245, 243, 239, 0.4);
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    color:
+        rgba(245, 243, 239, 0.75);
+
+    font-size: 12px;
+
+    margin-bottom: 14px;
+
+    line-height: 1.5;
+
+    animation:
+        byeolCartItemAppear 0.4s ease forwards;
+}
+
+
+/* =========================================================
+   PIED PANIER
+   ========================================================= */
+
+.menu-cart-footer {
+    border-top:
+        0.5px solid rgba(245, 243, 239, 0.15);
+
+    padding-top: 20px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.cart-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    margin-bottom: 20px;
+}
+
+.cart-total span:first-child {
+    color:
+        rgba(245, 243, 239, 0.6);
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.cart-total-amount {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-style: italic;
+
+    font-size: 20px;
+
+    color: #C9A86A;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.cart-total:hover .cart-total-amount {
+    color: #dfc68d;
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   BOUTON COMMANDER
+   ========================================================= */
+
+.place-order-btn {
+    width: 100%;
+
+    background: #F5F3EF;
+
+    border: none;
+
+    color: #0a0a0a;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    padding: 16px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background: #d8d4c9;
+
+    transform: translateY(-2px);
+}
+
+.place-order-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   MODALE EMAIL
+   ========================================================= */
+
+.menu-email-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.7);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 100;
+
+    animation:
+        byeolFadeIn 0.3s ease forwards;
+}
+
+.menu-email-modal-box {
+    background: #0d0d0c;
+
+    border:
+        0.5px solid rgba(245, 243, 239, 0.15);
+
+    padding: 40px;
+
+    max-width: 380px;
+
+    width: 90%;
+
+    animation:
+        byeolModalAppear 0.4s ease forwards;
+}
+
+.menu-email-modal-title {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-style: italic;
+
+    font-size: 22px;
+
+    color: #F5F3EF;
+
+    margin: 0 0 8px;
+}
+
+.menu-email-modal-subtitle {
+    color:
+        rgba(245, 243, 239, 0.5);
+
+    font-size: 12px;
+
+    margin: 0 0 24px;
+}
+
+.menu-email-input {
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    border-bottom:
+        0.5px solid rgba(245, 243, 239, 0.35);
+
+    color: #F5F3EF;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    padding: 10px 2px;
+
+    outline: none;
+
+    margin-bottom: 28px;
+
+    box-sizing: border-box;
+}
+
+.menu-email-input:focus {
+    border-color: #C9A86A;
+}
+
+.menu-email-modal-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 16px;
+}
+
+.menu-email-modal-buttons button {
+    background: none;
+
+    border: none;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    padding: 10px 0;
+}
+
+.menu-email-modal-buttons button[type="button"] {
+    color:
+        rgba(245, 243, 239, 0.5);
+}
+
+.menu-email-modal-buttons button[type="submit"] {
+    color: #C9A86A;
+}
+
+.menu-email-modal-buttons button[type="submit"]:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ÉCRAN CONFIRMATION
+   ========================================================= */
+
+.menu-confirmation-screen {
+    position: relative;
+
+    min-height: 100vh;
+
+    background-image:
+        url('/images/Byeol.jpg');
+
+    background-size: cover;
+
+    background-position: 65% center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+
+    animation:
+        byeolFadeIn 1s ease forwards;
+}
+
+.menu-confirmation-screen::before {
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10, 10, 10, 0.5) 0%,
+            rgba(10, 10, 10, 0.7) 50%,
+            rgba(10, 10, 10, 0.92) 100%
+        );
+}
+
+.menu-confirmation-seal,
+.menu-confirmation-title,
+.menu-confirmation-text,
+.menu-confirmation-instruction,
+.menu-confirmation-back {
+    position: relative;
+
+    z-index: 1;
+}
+
+.menu-confirmation-seal {
+    color: #C9A86A;
+
+    font-size: 20px;
+
+    margin: 0 0 16px;
+
+    animation:
+        byeolSealAppear 0.8s ease forwards;
+}
+
+.menu-confirmation-title {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    font-size: 32px;
+
+    color: #F5F3EF;
+
+    margin: 0 0 16px;
+
+    animation:
+        byeolTitleAppear 0.9s ease 0.15s both;
+}
+
+.menu-confirmation-text {
+    color:
+        rgba(245, 243, 239, 0.7);
+
+    font-size: 14px;
+
+    margin: 0 0 8px;
+
+    animation:
+        byeolFadeUp 0.8s ease 0.3s both;
+}
+
+.menu-confirmation-instruction {
+    color:
+        rgba(245, 243, 239, 0.4);
+
+    font-size: 12px;
+
+    margin: 0;
+
+    animation:
+        byeolFadeUp 0.8s ease 0.4s both;
+}
+
+.menu-confirmation-back {
+    margin-top: 32px;
+
+    background: none;
+
+    border:
+        0.5px solid rgba(245, 243, 239, 0.3);
+
+    color: #F5F3EF;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    padding: 14px 32px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+
+    animation:
+        byeolFadeUp 0.8s ease 0.5s both;
+}
+
+.menu-confirmation-back:hover {
+    background:
+        rgba(245, 243, 239, 0.08);
+
+    border-color:
+        rgba(201, 168, 106, 0.6);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes byeolMenuItemAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes byeolCategoryAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes byeolTitleAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes byeolFadeDown {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes byeolFadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes byeolFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes byeolGoldLine {
+
+    from {
+        width: 0;
+
+        opacity: 0;
+    }
+
+    to {
+        width: 35px;
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes byeolCartAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+@keyframes byeolCartItemAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+@keyframes byeolModalAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes byeolSealAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITÉ
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu-item-card,
+    .menu-category,
+    .menu-category-title,
+    .menu-table-label,
+    .menu-cart,
+    .menu-confirmation-screen,
+    .menu-confirmation-seal,
+    .menu-confirmation-title,
+    .menu-confirmation-text,
+    .menu-confirmation-instruction,
+    .menu-confirmation-back,
+    .menu-email-modal-overlay,
+    .menu-email-modal-box {
+        animation: none;
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+    .menu-item-image,
+    .menu-item-price,
+    .quantity-btn,
+    .place-order-btn,
+    .menu-confirmation-back {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .menu-items {
+        padding-right: 345px;
+    }
+
+    .menu-cart {
+        width: 300px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .menu-items {
+        padding:
+            32px
+            25px
+            230px
+            25px;
+    }
+
+    /*
+       Sur téléphone, le panier passe en bas
+       pour laisser le menu visible.
+    */
+
+    .menu-cart {
+        position: fixed;
+
+        top: auto;
+
+        bottom: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: 45vh;
+
+        border-left: none;
+
+        border-top:
+            0.5px solid rgba(245, 243, 239, 0.15);
+
+        padding: 22px 25px;
+
+        z-index: 100;
+
+        overflow-y: auto;
+    }
+
+    .menu-cart-footer {
+        margin-top: 15px;
+    }
+}
+
+
+/* =========================================================
+   PETIT MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .menu-items {
+        padding:
+            28px
+            18px
+            250px
+            18px;
+    }
+
+    .menu-category-title {
+        font-size: 29px;
+    }
+
+    .menu-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+    }
+
+    .menu-item-image-wrap {
+        height: 110px;
+    }
+
+    .menu-cart {
+        padding:
+            20px
+            18px;
+    }
+}
+
+
+/* =========================================================
+   TRÈS PETIT ÉCRAN
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item-image-wrap {
+        height: 180px;
+    }
+}

@@ -1,0 +1,142 @@
+.staff-admin-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #1c211f;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    padding: 32px 40px;
+    color: #f5f2ec;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  }
+  
+  .staff-admin-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: #f5f2ec;
+    margin-bottom: 20px;
+  }
+  
+  .staff-admin-container h2 {
+    font-size: 18px;
+    color: rgba(245, 242, 236, 0.85);
+  }
+  
+  .staff-admin-btn-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .staff-admin-back-btn,
+  .staff-admin-add-btn {
+    background: none;
+    border: 1px solid #c9a668;
+    color: #c9a668;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .staff-admin-back-btn:hover,
+  .staff-admin-add-btn:hover {
+    background: #c9a668;
+    color: #14201c;
+  }
+  
+  .staff-admin-add-btn {
+    margin-left: auto;
+  }
+  
+  .staff-admin-add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .staff-admin-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .staff-admin-form input {
+    flex: 1;
+    min-width: 160px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    background: #14201c;
+    color: #f5f2ec;
+    font-size: 14px;
+  }
+  
+  .staff-admin-form input::placeholder {
+    color: rgba(245, 242, 236, 0.4);
+  }
+  
+  .staff-admin-form button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .staff-admin-form button[type="submit"] {
+    background: #6fbf8c;
+    color: #14201c;
+    font-weight: 600;
+  }
+  .staff-admin-form button[type="submit"]:hover {
+    background: #5aa876;
+  }
+  
+  .staff-admin-form button[type="button"] {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f5f2ec;
+  }
+  .staff-admin-form button[type="button"]:hover {
+    background: rgba(255, 255, 255, 0.18);
+  }
+  
+  .staff-admin-success {
+    color: #6fbf8c;
+    margin-bottom: 16px;
+  }
+  
+  .staff-admin-error {
+    color: #e08a5a;
+    margin-bottom: 16px;
+  }
+  
+  .staff-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .staff-admin-table th,
+  .staff-admin-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 14px;
+    text-align: left;
+    color: #f5f2ec;
+  }
+  
+  .staff-admin-table th {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(245, 242, 236, 0.55);
+  }
+  
+  .staff-admin-table tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+  }

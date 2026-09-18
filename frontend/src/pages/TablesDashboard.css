@@ -1,0 +1,162 @@
+@import "tailwindcss";
+.tables-container {
+    background: #12100D;
+    min-height: 100vh;
+    padding: 56px 48px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.tables-container h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    color: #EDE8DA;
+    margin: 0 0 40px;
+}
+
+.tables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.table-card {
+    position: relative;
+    background: rgba(201, 168, 106, 0.03);
+    border: 0.5px solid rgba(201, 168, 106, 0.25);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8A8272;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.table-card:hover {
+    background: rgba(201, 168, 106, 0.08);
+    border-color: rgba(201, 168, 106, 0.5);
+    color: #EDE8DA;
+}
+
+.table-card.active {
+    background: rgba(201, 168, 106, 0.12);
+    border-color: #C9A86A;
+    color: #C9A86A;
+}
+
+.back-home-btn {
+    background: transparent;
+    color: #6E695D;
+    border: 0.5px solid rgba(201, 168, 106, 0.3);
+    padding: 10px 28px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.back-home-btn:hover {
+    color: #C9A86A;
+    border-color: #C9A86A;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-box.light-modal {
+    background: #1C1A16;
+    border: 0.5px solid rgba(201, 168, 106, 0.4);
+    padding: 32px 40px;
+    text-align: center;
+}
+
+.modal-box.light-modal p {
+    color: #EDE8DA;
+    font-size: 14px;
+    margin: 0 0 24px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.yes-btn,
+.no-btn {
+    background: transparent;
+    border: 0.5px solid rgba(201, 168, 106, 0.5);
+    color: #C9A86A;
+    padding: 9px 26px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.yes-btn:hover,
+.no-btn:hover {
+    background: rgba(201, 168, 106, 0.1);
+}
+
+@media (max-width: 600px) {
+    .tables-container {
+        padding: 32px 20px;
+    }
+    .tables-grid {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
+}
+.reservations-section {
+    text-align: left;
+    max-width: 900px;
+    margin: 48px auto 0;
+}
+
+.reservations-section h2 {
+    color: #EDE8DA;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.reservations-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservations-section th {
+    color: #C9A86A;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid rgba(201, 168, 106, 0.3);
+}
+
+.reservations-section td {
+    color: #EDE8DA;
+    font-size: 14px;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(201, 168, 106, 0.1);
+}
+
+.reservations-section p {
+    color: #8A8272;
+    text-align: center;
+}

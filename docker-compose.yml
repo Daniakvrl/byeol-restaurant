@@ -1,0 +1,38 @@
+# Docker Compose file for running Spring Boot backend, PostgreSQL database, and React frontend together
+
+services:
+  db:
+    image: postgres:14
+    container_name: restaurant_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"                     # Expose PostgreSQL on localhost:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data # Persist database data
+
+  backend:
+    image: wassim4592/restaurant_backend:latest
+    container_name: restaurant_backend
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+    ports:
+      - "8080:8080" # Changed external port back to 8080
+
+  frontend:
+    image: wassim4592/restaurant_frontend:latest
+    container_name: restaurant_frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  db_data:

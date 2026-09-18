@@ -1,0 +1,221 @@
+.sessions-container {
+    background: #0a0908;
+    min-height: 100vh;
+    padding: 64px 48px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.sessions-seal {
+    color: #C9A86A;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.sessions-heading {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    color: #F5F3EF;
+    margin: 0 0 6px;
+}
+
+.sessions-subtext {
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 40px;
+}
+
+.sessions-date-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.sessions-date-input {
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.3);
+    color: #F5F3EF;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 10px 4px;
+    outline: none;
+    color-scheme: dark;
+    transition: border-color 0.2s;
+}
+
+.sessions-date-input:focus {
+    border-color: #C9A86A;
+}
+
+.sessions-fetch-btn {
+    background: none;
+    border: 0.5px solid rgba(201, 168, 106, 0.5);
+    color: #C9A86A;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.sessions-fetch-btn:hover {
+    background: rgba(201, 168, 106, 0.1);
+}
+
+.sessions-status {
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 13px;
+    margin: 24px 0;
+}
+
+.sessions-error {
+    color: #d98a6b;
+    font-size: 12px;
+    margin: 16px 0;
+}
+
+.sessions-table-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sessions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sessions-table th {
+    color: #C9A86A;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 0.5px solid rgba(201, 168, 106, 0.25);
+}
+
+.sessions-table td {
+    color: #F5F3EF;
+    font-size: 13px;
+    padding: 14px 10px;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.08);
+}
+
+.sessions-id-btn {
+    background: none;
+    border: none;
+    color: #C9A86A;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.sessions-id-btn:hover {
+    text-decoration: underline;
+}
+
+.sessions-details {
+    background: rgba(201, 168, 106, 0.04);
+    border: 0.5px solid rgba(201, 168, 106, 0.15);
+    border-radius: 4px;
+    padding: 24px;
+    margin: 8px 0 16px;
+}
+
+.sessions-details-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.sessions-details-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sessions-details-grid span {
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sessions-details-grid div {
+    color: #F5F3EF;
+    font-size: 14px;
+}
+
+.sessions-items-label {
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.sessions-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sessions-items-table th {
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.1);
+}
+
+.sessions-items-table td {
+    color: rgba(245, 243, 239, 0.75);
+    font-size: 12px;
+    padding: 10px 8px;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.06);
+}
+
+.sessions-served-yes {
+    color: #7bc9a0 !important;
+}
+
+.sessions-served-no {
+    color: #d98a6b !important;
+}
+
+.sessions-back-btn {
+    margin-top: 40px;
+    background: none;
+    border: 0.5px solid rgba(245, 243, 239, 0.3);
+    color: #F5F3EF;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.sessions-back-btn:hover {
+    background: rgba(245, 243, 239, 0.08);
+}
+
+@media (max-width: 700px) {
+    .sessions-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,86 @@
+
+# ==============================
+# Maven
+# ==============================
+HELP.md
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven Wrapper
+!.mvn/wrapper/maven-wrapper.jar
+
+
+# ==============================
+# Configuration locale / secrets
+# ==============================
+src/main/resources/application-local.yml
+.env
+.env.*
+!.env.example
+
+
+# ==============================
+# Spring Boot
+# ==============================
+*.log
+
+
+# ==============================
+# Eclipse / STS
+# ==============================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+
+# ==============================
+# IntelliJ IDEA
+# ==============================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+
+# ==============================
+# NetBeans
+# ==============================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+
+# ==============================
+# VS Code
+# ==============================
+.vscode/
+
+
+# ==============================
+# OS generated files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ==============================
+# Temporary files
+# ==============================
+*.tmp
+*.temp
+*.swp
+*.swo
+# Node.js
+node_modules/
+frontend/node_modules/

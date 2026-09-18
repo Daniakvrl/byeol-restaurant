@@ -1,0 +1,236 @@
+.editorial-page {
+    background: #0a0a0a;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.editorial-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 40px;
+    position: relative;
+}
+
+.editorial-logo {
+    color: #F5F3EF;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.editorial-nav-links {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    gap: 28px;
+}
+
+.editorial-nav-links button {
+    background: none;
+    border: none;
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+
+.editorial-nav-links button:hover {
+    color: #F5F3EF;
+}
+
+.editorial-hero {
+    position: relative;
+    min-height: 620px;
+    background-image: url('/images/Byeol.jpg');
+    background-size: cover;
+    background-position: 65% center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editorial-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.45) 0%,
+        rgba(10, 10, 10, 0.6) 45%,
+        rgba(10, 10, 10, 0.9) 100%
+    );
+}
+
+.editorial-hero-content {
+    position: relative;
+    text-align: center;
+    padding: 60px 40px;
+    max-width: 560px;
+}
+
+.editorial-kicker {
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 28px;
+}
+
+.editorial-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 300;
+    font-size: 58px;
+    line-height: 1.05;
+    color: #F5F3EF;
+    margin: 0 0 8px;
+    letter-spacing: 1px;
+}
+
+.editorial-divider {
+    width: 24px;
+    height: 1px;
+    background: rgba(245, 243, 239, 0.4);
+    margin: 24px auto;
+}
+
+.editorial-tagline {
+    color: rgba(245, 243, 239, 0.75);
+    font-size: 13px;
+    line-height: 2;
+    margin: 0 0 44px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.editorial-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.editorial-btn-outline {
+    background: transparent;
+    border: 0.5px solid rgba(245, 243, 239, 0.4);
+    color: #F5F3EF;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    margin-right: -0.5px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.editorial-btn-outline:hover {
+    background: rgba(245, 243, 239, 0.08);
+}
+
+.editorial-btn-solid {
+    background: #F5F3EF;
+    border: 0.5px solid #F5F3EF;
+    color: #0a0a0a;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.editorial-btn-solid:hover {
+    background: #d8d4c9;
+}
+
+.editorial-btn-solid:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.editorial-table-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.editorial-table-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.4);
+    color: #F5F3EF;
+    font-size: 15px;
+    font-family: inherit;
+    text-align: center;
+    padding: 8px;
+    outline: none;
+    width: 200px;
+    transition: border-color 0.2s;
+}
+
+.editorial-table-form input:focus {
+    border-color: #F5F3EF;
+}
+
+.editorial-table-form input::placeholder {
+    color: rgba(245, 243, 239, 0.4);
+}
+
+.editorial-error {
+    color: #d98a6b;
+    font-size: 11px;
+    margin: 0;
+}
+
+.editorial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.editorial-footer span {
+    color: rgba(245, 243, 239, 0.35);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.editorial-footer button {
+    background: none;
+    border: none;
+    color: rgba(245, 243, 239, 0.35);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+
+.editorial-footer button:hover {
+    color: #F5F3EF;
+}
+
+@media (max-width: 700px) {
+    .editorial-nav-links {
+        display: none;
+    }
+    .editorial-title {
+        font-size: 40px;
+    }
+    .editorial-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .editorial-btn-outline,
+    .editorial-btn-solid {
+        margin: 0;
+        width: 200px;
+    }
+}

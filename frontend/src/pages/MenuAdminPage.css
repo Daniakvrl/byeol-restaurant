@@ -1,0 +1,424 @@
+@import "tailwindcss";
+
+/* --- Menu Admin Page (Byeol) --- */
+.menu-admin-container {
+  background: #12100D;
+  min-height: 100vh;
+  padding: 56px 48px;
+  font-family: 'Inter', sans-serif;
+  color: #EDE8DA;
+}
+
+.menu-admin-container h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  color: #EDE8DA;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+/* --- Boutons du haut --- */
+.menu-admin-btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-admin-btn-row button {
+  background: transparent;
+  color: #C9A86A;
+  border: 0.5px solid rgba(201, 168, 106, 0.5);
+  padding: 10px 24px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.menu-admin-btn-row button:hover {
+  background: rgba(201, 168, 106, 0.08);
+  border-color: #C9A86A;
+}
+
+.menu-admin-add-btn {
+  background: rgba(201, 168, 106, 0.08) !important;
+  border-color: #C9A86A !important;
+}
+
+/* --- Formulaire d'ajout --- */
+.menu-admin-form {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  background: rgba(201, 168, 106, 0.03);
+  border: 0.5px solid rgba(201, 168, 106, 0.25);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu-admin-form input,
+.menu-admin-form select,
+.menu-admin-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid rgba(201, 168, 106, 0.3);
+  padding: 8px 2px;
+  color: #EDE8DA;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+  border-radius: 0;
+  transition: border-color 0.2s;
+}
+
+.menu-admin-form input:focus,
+.menu-admin-form select:focus,
+.menu-admin-form textarea:focus {
+  border-bottom-color: #C9A86A;
+}
+
+.menu-admin-form input::placeholder,
+.menu-admin-form textarea::placeholder {
+  color: #5C574C;
+}
+
+.menu-admin-form select {
+  color: #EDE8DA;
+}
+
+.menu-admin-form select option {
+  background: #1C1A16;
+  color: #EDE8DA;
+}
+
+.menu-admin-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.menu-admin-form input[type="file"] {
+  border-bottom: none;
+  color: #8A8272;
+  font-size: 12px;
+}
+
+.menu-admin-form button[type="submit"] {
+  width: fit-content;
+  background: transparent;
+  color: #C9A86A;
+  border: 0.5px solid #C9A86A;
+  padding: 11px 40px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.menu-admin-form button[type="submit"]:hover {
+  background: rgba(201, 168, 106, 0.1);
+}
+
+/* --- États (loading / erreur / vide) --- */
+.menu-admin-container > p {
+  text-align: center;
+  color: #8A8272;
+  font-size: 13px;
+}
+
+.menu-admin-error {
+  color: #C9756A !important;
+}
+
+.menu-admin-empty {
+  color: #8A8272 !important;
+}
+
+/* --- Table --- */
+.menu-admin-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.menu-admin-table thead {
+  background: transparent;
+}
+
+.menu-admin-table thead th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #8A8272;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(201, 168, 106, 0.3);
+}
+
+.menu-admin-table tbody td {
+  padding: 16px;
+  font-size: 13px;
+  color: #EDE8DA;
+  border-bottom: 0.5px solid rgba(201, 168, 106, 0.12);
+  vertical-align: middle;
+}
+
+.menu-admin-table tbody tr:hover {
+  background: rgba(201, 168, 106, 0.03);
+}
+
+.menu-admin-description {
+  color: #8A8272;
+  font-size: 12px;
+  max-width: 240px;
+}
+
+.menu-admin-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 0.5px solid rgba(201, 168, 106, 0.3);
+}
+
+.menu-admin-no-image {
+  color: #5C574C;
+  font-size: 12px;
+}
+
+/* --- Switch disponibilité --- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(201, 168, 106, 0.3);
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #8A8272;
+  transition: 0.2s;
+}
+
+.switch input:checked + .slider {
+  background-color: rgba(201, 168, 106, 0.15);
+  border-color: #C9A86A;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+  background-color: #C9A86A;
+}
+
+.slider.round {
+  border-radius: 22px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* --- Modal de confirmation --- */
+.menu-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.menu-modal-box {
+  background: #1C1A16;
+  border: 0.5px solid rgba(201, 168, 106, 0.4);
+  padding: 32px 40px;
+  text-align: center;
+}
+
+.menu-modal-box p {
+  color: #EDE8DA;
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+
+.menu-modal-box button {
+  background: transparent;
+  color: #C9A86A;
+  border: 0.5px solid rgba(201, 168, 106, 0.5);
+  padding: 8px 24px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  margin: 0 6px;
+  transition: background 0.2s;
+}
+
+.menu-modal-box button:hover {
+  background: rgba(201, 168, 106, 0.1);
+}
+
+@media (max-width: 720px) {
+  .menu-admin-container {
+      padding: 32px 20px;
+  }
+  .menu-admin-btn-row {
+      flex-direction: column;
+      gap: 12px;
+  }
+}
+.menu-admin-filter-row {
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #8A8272;
+}
+
+.menu-admin-filter-row select {
+  background: transparent;
+  border: 0.5px solid rgba(201, 168, 106, 0.35);
+  color: #EDE8DA;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.menu-admin-filter-row select option {
+  background: #1C1A16;
+  color: #EDE8DA;
+}
+
+.menu-admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.menu-admin-edit-btn,
+.menu-admin-delete-btn {
+  background: transparent;
+  border: 0.5px solid rgba(201, 168, 106, 0.4);
+  color: #C9A86A;
+  padding: 6px 14px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.menu-admin-edit-btn:hover {
+  background: rgba(201, 168, 106, 0.1);
+  border-color: #C9A86A;
+}
+
+.menu-admin-delete-btn {
+  color: #C9756A;
+  border-color: rgba(201, 117, 106, 0.35);
+}
+
+.menu-admin-delete-btn:hover {
+  background: rgba(201, 117, 106, 0.1);
+  border-color: #C9756A;
+}
+
+.menu-edit-box {
+  text-align: left;
+  max-width: 360px;
+}
+
+.menu-edit-title {
+  font-size: 14px;
+  color: #EDE8DA;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.menu-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-edit-form label {
+  font-size: 10px;
+  color: #8A8272;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.menu-edit-form input,
+.menu-edit-form select {
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid rgba(201, 168, 106, 0.3);
+  padding: 6px 2px;
+  color: #EDE8DA;
+  font-size: 13px;
+  outline: none;
+}
+
+.menu-edit-form select option {
+  background: #1C1A16;
+  color: #EDE8DA;
+}
+
+.menu-edit-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.menu-edit-buttons button {
+  background: transparent;
+  border: 0.5px solid rgba(201, 168, 106, 0.5);
+  color: #C9A86A;
+  padding: 8px 22px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

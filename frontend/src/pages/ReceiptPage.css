@@ -1,0 +1,544 @@
+
+@import "tailwindcss";
+
+/* =========================================================
+   BYEOL — HIGH END RESTAURANT
+   Noir · Ivoire · Or
+   ========================================================= */
+
+.receipt-container {
+    width: min(650px, calc(100% - 30px));
+    min-height: 850px;
+
+    margin: 45px auto;
+    padding: 65px 65px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #191714 0%,
+            #0c0c0c 45%,
+            #080808 100%
+        );
+
+    color: #F5F3EF;
+
+    border: 1px solid rgba(190, 155, 83, 0.35);
+
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, 0.65);
+
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+
+    position: relative;
+}
+
+
+/* Cadre intérieur */
+
+.receipt-container::before {
+    content: "";
+
+    position: absolute;
+    inset: 12px;
+
+    border: 1px solid rgba(190, 155, 83, 0.12);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   EN-TÊTE
+   ========================================================= */
+
+.receipt-header {
+    text-align: center;
+}
+
+
+.receipt-brand {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 43px;
+    font-weight: 300;
+
+    letter-spacing: 9px;
+
+    color: #F5F3EF;
+}
+
+
+.receipt-subtitle {
+    margin-top: 12px;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    color: #b99a5b;
+
+    text-transform: uppercase;
+}
+
+
+.receipt-line {
+    width: 38px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #b99a5b;
+}
+
+
+.receipt-document {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: rgba(245, 243, 239, 0.4);
+}
+
+
+/* =========================================================
+   INFORMATIONS
+   ========================================================= */
+
+.receipt-client {
+    margin-top: 50px;
+
+    padding: 25px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 28px 45px;
+
+    border-top: 1px solid rgba(245, 243, 239, 0.13);
+    border-bottom: 1px solid rgba(245, 243, 239, 0.13);
+}
+
+
+.receipt-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.receipt-label {
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: rgba(245, 243, 239, 0.38);
+}
+
+
+.receipt-value {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 16px;
+
+    font-weight: 300;
+
+    color: #F5F3EF;
+}
+
+
+/* =========================================================
+   RÉSUMÉ
+   ========================================================= */
+
+.receipt-summary {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    margin-top: 32px;
+
+    text-align: center;
+}
+
+
+.receipt-summary div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.receipt-summary span {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(245, 243, 239, 0.35);
+}
+
+
+.receipt-summary strong {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 17px;
+
+    font-weight: 300;
+
+    color: #b99a5b;
+}
+
+
+/* =========================================================
+   DÉTAIL
+   ========================================================= */
+
+.receipt-section-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #b99a5b;
+}
+
+
+.receipt-table-head {
+    display: grid;
+
+    grid-template-columns: 1fr 70px 110px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid rgba(245, 243, 239, 0.25);
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    color: rgba(245, 243, 239, 0.35);
+}
+
+
+.receipt-table-head span:nth-child(2) {
+    text-align: center;
+}
+
+
+.receipt-table-head span:last-child {
+    text-align: right;
+}
+
+
+.receipt-items {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+.receipt-item {
+    display: grid;
+
+    grid-template-columns: 1fr 70px 110px;
+
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid rgba(245, 243, 239, 0.08);
+
+    font-size: 11px;
+
+    color: rgba(245, 243, 239, 0.78);
+}
+
+
+.receipt-item span:nth-child(2) {
+    text-align: center;
+
+    color: rgba(245, 243, 239, 0.4);
+}
+
+
+.receipt-item span:last-child {
+    text-align: right;
+
+    color: #F5F3EF;
+}
+
+
+/* =========================================================
+   TOTAL
+   ========================================================= */
+
+.receipt-total {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin-top: 35px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(185, 154, 91, 0.5);
+}
+
+
+.receipt-total span {
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: rgba(245, 243, 239, 0.45);
+}
+
+
+.receipt-total strong {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 25px;
+
+    font-weight: 300;
+
+    color: #b99a5b;
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.receipt-thankyou {
+    margin-top: 55px;
+
+    text-align: center;
+}
+
+
+.receipt-gold-line {
+    width: 25px;
+    height: 1px;
+
+    margin: 0 auto 20px;
+
+    background: #b99a5b;
+}
+
+
+.receipt-thankyou p {
+    margin: 0;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 17px;
+
+    font-weight: 300;
+
+    color: #F5F3EF;
+}
+
+
+.receipt-thankyou span {
+    display: block;
+
+    margin-top: 9px;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(245, 243, 239, 0.35);
+}
+
+
+/* =========================================================
+   BOUTON
+   ========================================================= */
+
+.receipt-print-btn {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding: 15px;
+
+    background: #b99a5b;
+
+    color: #080808;
+
+    border: 1px solid #b99a5b;
+
+    border-radius: 0;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+}
+
+
+.receipt-print-btn:hover {
+    background: transparent;
+
+    color: #b99a5b;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.receipt-footer {
+    margin-top: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(245, 243, 239, 0.3);
+}
+
+
+.receipt-footer-logo {
+    margin-bottom: 5px;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    color: #F5F3EF;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .receipt-container {
+        width: calc(100% - 20px);
+
+        margin: 20px auto;
+
+        padding: 45px 25px;
+
+        min-height: auto;
+    }
+
+    .receipt-brand {
+        font-size: 34px;
+
+        letter-spacing: 7px;
+    }
+
+    .receipt-client {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .receipt-summary {
+        gap: 45px;
+    }
+
+    .receipt-table-head,
+    .receipt-item {
+        grid-template-columns: 1fr 45px 90px;
+    }
+
+    .receipt-total strong {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================================
+   IMPRESSION
+   ========================================================= */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .receipt-container {
+        width: 100%;
+        min-height: auto;
+
+        margin: 0;
+        padding: 25px;
+
+        background: white;
+
+        color: #111;
+
+        border: none;
+
+        box-shadow: none;
+    }
+
+    .receipt-container::before {
+        display: none;
+    }
+
+    .receipt-brand,
+    .receipt-value,
+    .receipt-total strong,
+    .receipt-footer-logo {
+        color: #111;
+    }
+
+    .receipt-subtitle,
+    .receipt-section-title,
+    .receipt-summary strong {
+        color: #777;
+    }
+
+    .receipt-print-btn {
+        display: none;
+    }
+}

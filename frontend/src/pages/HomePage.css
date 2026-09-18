@@ -1,0 +1,360 @@
+/* HomePage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap');
+
+.home-container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('/images/entre.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ece7dc;
+    padding: 56px 64px;
+    overflow: hidden;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* Voile sombre, chaud, plus profond qu'un simple noir */
+.home-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(16, 15, 13, 0.93) 0%, rgba(14, 13, 11, 0.96) 45%, rgba(10, 9, 8, 0.98) 100%);
+    z-index: 0;
+}
+
+/* Grain très léger pour casser l'aspect "flat / IA" */
+.home-glow {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 3px 3px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.home-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------- HEADER ---------- */
+
+.home-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10.5px;
+    letter-spacing: 2.5px;
+    color: rgba(236, 231, 220, 0.45);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.home-status-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #c9a668;
+    box-shadow: 0 0 5px rgba(201, 166, 104, 0.7);
+}
+
+.home-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.home-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 44px;
+    color: #f5f1e8;
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+
+.home-datetime {
+    text-align: right;
+}
+
+.home-date {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(236, 231, 220, 0.4);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.home-time {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    color: #c9a668;
+    margin: 6px 0 0;
+}
+
+.home-divider {
+    position: relative;
+    height: 1px;
+    background: rgba(236, 231, 220, 0.12);
+    margin: 28px 0 44px;
+}
+
+.home-divider::after {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-2px, -52%);
+    font-size: 11px;
+    color: #c9a668;
+    background: transparent;
+}
+
+/* ---------- GRID DES CARTES ---------- */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 48px;
+}
+
+.home-card {
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid rgba(236, 231, 220, 0.09);
+    background: #17140f;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(201, 166, 104, 0.55);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201, 166, 104, 0.3);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.home-card:hover::before {
+    transform: scaleX(1);
+}
+
+.home-card-photo {
+    position: relative;
+    height: 108px;
+    padding: 22px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(180deg, rgba(236, 231, 220, 0.03) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(236, 231, 220, 0.06);
+}
+
+/* Plus de lavage coloré agressif : une seule teinte sourde, différenciée
+   par une très légère variation de chaleur, pas de bleu/orange criards */
+.home-photo-orange,
+.home-photo-blue,
+.home-photo-gold,
+.home-photo-disabled {
+    background: linear-gradient(180deg, rgba(236, 231, 220, 0.035) 0%, transparent 100%);
+}
+
+.home-card-number {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(236, 231, 220, 0.22);
+}
+
+.home-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 11px;
+    border-radius: 3px;
+    background: rgba(236, 231, 220, 0.05);
+    border: 1px solid rgba(236, 231, 220, 0.12);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: rgba(236, 231, 220, 0.75);
+    text-transform: uppercase;
+    height: fit-content;
+    font-weight: 500;
+}
+
+.home-badge-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.home-card-orange .home-badge-dot { background: #c9a668; }
+.home-card-blue .home-badge-dot { background: #c9a668; }
+.home-badge-gold .home-badge-dot { background: #c9a668; }
+.home-badge-disabled .home-badge-dot { background: rgba(236, 231, 220, 0.35); }
+
+.home-badge-disabled {
+    color: rgba(236, 231, 220, 0.4);
+}
+
+/* ---------- CORPS DE CARTE ---------- */
+
+.home-card-body {
+    padding: 22px 26px 0;
+}
+
+.home-card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #f5f1e8;
+    margin: 0 0 9px;
+    letter-spacing: 0.2px;
+}
+
+.home-card-desc {
+    font-size: 13.5px;
+    color: rgba(236, 231, 220, 0.5);
+    margin: 0;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+/* ---------- STATS ---------- */
+
+.home-card-stats {
+    display: flex;
+    gap: 0;
+    padding: 22px 26px 26px;
+    flex-grow: 1;
+}
+
+.home-card-stats > div {
+    padding-right: 28px;
+    margin-right: 28px;
+    border-right: 1px solid rgba(236, 231, 220, 0.08);
+}
+
+.home-card-stats > div:last-child {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.home-stat-value {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+    color: #c9a668;
+}
+
+.home-stat-value-muted {
+    color: rgba(236, 231, 220, 0.32) !important;
+}
+
+.home-stat-label {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: rgba(236, 231, 220, 0.42);
+    text-transform: uppercase;
+    margin: 5px 0 0;
+    font-weight: 500;
+}
+
+/* ---------- FOOTER DE CARTE ---------- */
+
+.home-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 26px;
+    border-top: 1px solid rgba(236, 231, 220, 0.07);
+    background: rgba(0, 0, 0, 0.15);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgba(236, 231, 220, 0.55);
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.home-card:hover .home-card-footer {
+    color: #c9a668;
+    letter-spacing: 2.5px;
+}
+
+.home-card-footer span:last-child {
+    transition: transform 0.3s ease;
+}
+
+.home-card:hover .home-card-footer span:last-child {
+    transform: translateX(3px);
+}
+
+.home-card-disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.home-card-disabled:hover {
+    transform: none;
+    border-color: rgba(236, 231, 220, 0.09);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.home-card-disabled:hover::before {
+    transform: scaleX(0);
+}
+
+/* ---------- FOOTER PAGE ---------- */
+
+.home-footer {
+    text-align: center;
+    font-size: 12.5px;
+    color: rgba(236, 231, 220, 0.4);
+    letter-spacing: 0.3px;
+}
+
+.home-footer span {
+    color: rgba(236, 231, 220, 0.7);
+    font-weight: 500;
+}
+
+.home-logout {
+    color: #c9a668 !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+.home-logout:hover {
+    border-bottom-color: #c9a668;
+}

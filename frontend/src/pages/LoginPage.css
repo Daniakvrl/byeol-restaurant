@@ -1,0 +1,199 @@
+.login-page {
+    display: flex;
+    min-height: 100vh;
+    background: #0a0908;
+    font-family: 'Inter', sans-serif;
+}
+
+.login-image-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0d0b08;
+    padding: 40px;
+}
+
+.login-arch-frame {
+    width: 260px;
+    height: 380px;
+    border: 0.5px solid rgba(201, 168, 106, 0.35);
+    border-radius: 130px 130px 8px 8px;
+    padding: 10px;
+}
+
+.login-arch-frame-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 120px 120px 4px 4px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #1c1812 0%, #0d0b08 100%);
+}
+
+.login-arch-photo {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/Byeol.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-star {
+    color: #C9A86A;
+    font-size: 18px;
+    margin: 28px 0 6px;
+}
+
+.login-brandmark {
+    color: #8A8272;
+    font-size: 13px;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.login-form-side {
+    position: relative;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px;
+    max-width: 480px;
+}
+
+.login-kicker {
+    color: #C9A86A;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.login-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 42px;
+    color: #F5F3EF;
+    margin: 0;
+}
+
+.login-divider {
+    width: 48px;
+    height: 1px;
+    background: #C9A86A;
+    margin: 20px 0 32px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-label {
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 16px 0 8px;
+}
+
+.login-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.3);
+    color: #F5F3EF;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 10px 2px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.login-input:focus {
+    border-color: #C9A86A;
+}
+
+.login-input::placeholder {
+    color: rgba(245, 243, 239, 0.3);
+}
+
+.login-button {
+    margin-top: 32px;
+    background: #F5F3EF;
+    border: none;
+    color: #0a0908;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.login-button:hover {
+    background: #d8d4c9;
+}
+
+.login-error {
+    color: #d98a6b;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.login-link {
+    background: none;
+    border: none;
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 20px;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #F5F3EF;
+}
+
+.login-register-link {
+    margin-top: 8px;
+}
+
+.login-back-link {
+    position: absolute;
+    bottom: 32px;
+    left: 64px;
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .login-page {
+        flex-direction: column;
+    }
+    .login-image-side {
+        min-height: 260px;
+        padding: 24px;
+    }
+    .login-arch-frame {
+        width: 160px;
+        height: 220px;
+    }
+    .login-form-side {
+        padding: 40px 32px;
+        max-width: none;
+    }
+    .login-title {
+        font-size: 32px;
+    }
+    .login-back-link {
+        position: static;
+        margin-top: 20px;
+    }
+}

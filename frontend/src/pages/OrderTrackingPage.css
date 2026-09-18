@@ -1,0 +1,65 @@
+.tracking-page {
+    min-height: 100vh;
+    background: #14201c;
+    color: #f5f2ec;
+    padding: 64px 32px;
+    text-align: center;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+.tracking-star {
+    color: #c9a668;
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.tracking-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 32px;
+    margin: 0 0 24px;
+}
+
+.tracking-status,
+.tracking-error {
+    font-size: 16px;
+    color: rgba(245, 242, 236, 0.7);
+}
+
+.tracking-order-status {
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.tracking-order-status strong {
+    color: #c9a668;
+}
+
+.tracking-items {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tracking-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1c2620;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+}
+
+.tracking-item .served {
+    color: #7fd8a3;
+    font-weight: 500;
+}
+
+.tracking-item .pending {
+    color: #dcb875;
+    font-weight: 500;
+}

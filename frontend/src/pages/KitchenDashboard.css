@@ -1,0 +1,150 @@
+.kitchen-container {
+    background: #0a0a0a;
+    min-height: 100vh;
+    padding: 48px;
+    font-family: 'Inter', sans-serif;
+    color: #F5F3EF;
+}
+
+.kitchen-kicker {
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+.kitchen-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 32px;
+    color: #F5F3EF;
+    margin: 0 0 32px;
+}
+
+.kitchen-status {
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 13px;
+}
+
+.kitchen-error {
+    color: #d98a6b;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.kitchen-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.kitchen-row {
+    display: grid;
+    grid-template-columns: 60px 90px 60px 1fr 80px 100px 140px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.08);
+}
+
+.kitchen-header-row {
+    padding-bottom: 14px;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.15);
+}
+
+.kitchen-header-row span {
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.kitchen-cell-muted {
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 12px;
+}
+
+.kitchen-cell-table {
+    color: #C9A86A;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.kitchen-cell-item {
+    color: #F5F3EF;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.kitchen-status-pending {
+    color: #d98a6b;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.kitchen-status-served {
+    color: #7bc9a0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.kitchen-serve-btn {
+    background: none;
+    border: 0.5px solid rgba(201, 168, 106, 0.5);
+    color: #C9A86A;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-family: inherit;
+    justify-self: start;
+    transition: background 0.2s;
+}
+
+.kitchen-serve-btn:hover {
+    background: rgba(201, 168, 106, 0.1);
+}
+
+.kitchen-done-label {
+    color: rgba(245, 243, 239, 0.3);
+    font-size: 11px;
+    font-style: italic;
+    justify-self: start;
+}
+
+.kitchen-back-wrap {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.kitchen-back-btn {
+    background: none;
+    border: 0.5px solid rgba(245, 243, 239, 0.3);
+    color: #F5F3EF;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.kitchen-back-btn:hover {
+    background: rgba(245, 243, 239, 0.08);
+}
+
+@media (max-width: 800px) {
+    .kitchen-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 16px 0;
+    }
+    .kitchen-header-row {
+        display: none;
+    }
+}

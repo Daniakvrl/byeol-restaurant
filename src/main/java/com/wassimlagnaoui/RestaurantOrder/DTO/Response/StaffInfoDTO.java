@@ -1,0 +1,18 @@
+package com.wassimlagnaoui.RestaurantOrder.DTO.Response;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class StaffInfoDTO {
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private Long employeeId;
+    private String role; // Role of the staff member (e.g., waiter, chef, manager)
+}
+

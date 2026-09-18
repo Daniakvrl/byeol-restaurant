@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* === Base layout for entire app === */
+.dashboard-container {
+    padding: 48px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(34, 34, 34, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    color: #f1f1f1;
+}
+
+/* === Headings === */
+.dashboard-container h1,
+.dashboard-container h2,
+.dashboard-container h3 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* === Table === */
+.dashboard-container table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #23272f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.dashboard-container th,
+.dashboard-container td {
+    padding: 18px 14px;
+    text-align: left;
+    border-bottom: 1px solid #353b48;
+}
+
+.dashboard-container th {
+    background: #2d313a;
+    color: #e5e5e5;
+    font-weight: 700;
+    font-size: 1.08rem;
+}
+
+.dashboard-container td {
+    font-size: 1.01rem;
+    color: #e0e0e0;
+}
+
+.dashboard-container tr:hover {
+    background: #2d313a;
+    transition: background 0.2s;
+}
+
+/* === Buttons === */
+.dashboard-container .button {
+    padding: 12px 22px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #4f8cff 0%, #38e8ff 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-container .button.serve {
+    background: linear-gradient(90deg, #34e89e 0%, #0f3443 100%);
+}
+
+.dashboard-container .button.serve:hover {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+}
+
+.dashboard-container .button.cancel {
+    background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+}
+
+.dashboard-container .button.cancel:hover {
+    background: linear-gradient(90deg, #ff5858 0%, #ffb199 100%);
+}
+
+/* === Error Text === */
+.dashboard-container .error-text {
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+/* === Status Labels === */
+.dashboard-container .status-served {
+    color: #34e89e;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+}
+
+.dashboard-container .status-unserved {
+    color: #ffd86b;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+}
+
+/* === Table Grid Layout === */
+.dashboard-container .table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 28px;
+    margin-top: 36px;
+}
+
+/* === Table Card === */
+.dashboard-container .table-card {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    border-radius: 14px;
+    padding: 28px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    border: 1.5px solid #353b48;
+}
+
+.dashboard-container .table-card:hover {
+    transform: translateY(-7px) scale(1.03);
+    background: linear-gradient(120deg, #232526 0%, #2b5876 100%);
+}
+
+.dashboard-container .table-card.active {
+    background: linear-gradient(120deg, #1eec92 0%, #232526 100%);
+    color: #1a2e05;
+    border: 2px solid #1eec92;
+    box-shadow: 0 4px 18px rgba(67, 233, 123, 0.18);
+}
+
+.dashboard-container .table-card.active:hover {
+    background: linear-gradient(120deg, #1eec92 0%, #232526 100%);
+    filter: brightness(1.08);
+}
+
+.dashboard-container .table-card h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.dashboard-container .table-card p {
+    font-size: 1.01rem;
+    margin-top: 10px;
+    color: #bdbdbd;
+}

@@ -1,0 +1,332 @@
+
+/* =========================================================
+   BYEOL - GESTION DU PERSONNEL
+   Style élégant, sombre et doré
+   ========================================================= */
+
+   .staff-admin-container {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 50px 6%;
+    background:
+        linear-gradient(rgba(8, 8, 8, 0.96), rgba(8, 8, 8, 0.98)),
+        url('/images/Byeol.jpg') center / cover fixed;
+    color: #f5f3ef;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================================================
+   TITRE
+   ========================================================= */
+
+.staff-admin-container h1 {
+    margin: 0;
+    color: #f5f3ef;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.staff-admin-container h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 1px;
+    margin-top: 18px;
+    background: #b99a5b;
+}
+
+/* =========================================================
+   BOUTONS DU HAUT
+   ========================================================= */
+
+.staff-admin-btn-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 35px 0;
+}
+
+.staff-admin-back-btn,
+.staff-admin-add-btn {
+    min-height: 44px;
+    padding: 0 22px;
+    border: 1px solid rgba(185, 154, 91, 0.55);
+    background: transparent;
+    color: #f5f3ef;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.staff-admin-back-btn:hover,
+.staff-admin-add-btn:hover {
+    background: #b99a5b;
+    border-color: #b99a5b;
+    color: #0a0a0a;
+}
+
+.staff-admin-add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   FORMULAIRE
+   ========================================================= */
+
+.staff-admin-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    margin-bottom: 35px;
+    padding: 28px;
+
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid rgba(185, 154, 91, 0.35);
+}
+
+/* =========================================================
+   CHAMPS
+   ========================================================= */
+
+.staff-admin-form input {
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    border: 1px solid rgba(245, 243, 239, 0.15);
+    outline: none;
+
+    background: #0d0d0d;
+    color: #f5f3ef;
+
+    font-size: 13px;
+}
+
+.staff-admin-form input::placeholder {
+    color: #77736d;
+}
+
+.staff-admin-form input:focus {
+    border-color: #b99a5b;
+}
+
+/* =========================================================
+   BOUTONS DU FORMULAIRE
+   ========================================================= */
+
+.staff-admin-form button {
+    min-height: 44px;
+
+    border: 1px solid rgba(185, 154, 91, 0.5);
+
+    background: transparent;
+    color: #f5f3ef;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.staff-admin-form button[type="submit"] {
+    background: #b99a5b;
+    border-color: #b99a5b;
+    color: #0a0a0a;
+}
+
+.staff-admin-form button[type="submit"]:hover {
+    background: #d0b77b;
+    border-color: #d0b77b;
+}
+
+.staff-admin-form button[type="button"]:hover {
+    background: rgba(245, 243, 239, 0.08);
+}
+
+/* =========================================================
+   MESSAGES
+   ========================================================= */
+
+.staff-admin-success,
+.staff-admin-error {
+    margin: 15px 0;
+    padding: 13px 16px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    font-size: 12px;
+}
+
+.staff-admin-success {
+    border-left: 2px solid #b99a5b;
+    color: #d0b77b;
+}
+
+.staff-admin-error {
+    border-left: 2px solid #a85d56;
+    color: #d9958e;
+}
+
+/* =========================================================
+   SOUS-TITRE
+   ========================================================= */
+
+.staff-admin-container h2 {
+    margin: 35px 0 18px;
+
+    color: #f5f3ef;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/* =========================================================
+   TABLEAU
+   ========================================================= */
+
+.staff-admin-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: rgba(15, 15, 15, 0.96);
+
+    border: 1px solid rgba(245, 243, 239, 0.12);
+}
+
+/* EN-TÊTE */
+
+.staff-admin-table thead {
+    background: #111111;
+}
+
+.staff-admin-table th {
+    padding: 17px 15px;
+
+    border-bottom: 1px solid rgba(185, 154, 91, 0.4);
+
+    color: #b99a5b;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    text-align: left;
+}
+
+/* CELLULES */
+
+.staff-admin-table td {
+    padding: 17px 15px;
+
+    border-bottom: 1px solid rgba(245, 243, 239, 0.07);
+
+    color: #d8d5cf;
+
+    font-size: 13px;
+}
+
+.staff-admin-table tbody tr:hover {
+    background: rgba(185, 154, 91, 0.05);
+}
+
+/* RÔLE */
+
+.staff-admin-table td:nth-child(5) {
+    color: #cdb77f;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   BOUTON SUPPRIMER
+   ========================================================= */
+
+.staff-admin-delete-btn {
+    padding: 8px 14px;
+
+    border: 1px solid rgba(170, 80, 75, 0.5);
+
+    background: transparent;
+    color: #c98780;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.staff-admin-delete-btn:hover {
+    background: rgba(170, 80, 75, 0.15);
+    border-color: #a85d56;
+    color: #e0aaa4;
+}
+
+.staff-admin-delete-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .staff-admin-container {
+        padding: 35px 20px;
+    }
+
+    .staff-admin-container h1 {
+        font-size: 38px;
+    }
+
+    .staff-admin-form {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .staff-admin-table th,
+    .staff-admin-table td {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .staff-admin-btn-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .staff-admin-back-btn,
+    .staff-admin-add-btn {
+        width: 100%;
+    }
+
+    .staff-admin-form {
+        padding: 20px;
+    }
+}

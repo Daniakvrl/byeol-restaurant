@@ -1,0 +1,202 @@
+.register-page {
+    display: flex;
+    min-height: 100vh;
+    background: #0a0908;
+    font-family: 'Inter', sans-serif;
+}
+
+.register-image-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0d0b08;
+    padding: 40px;
+}
+
+.register-arch-frame {
+    width: 260px;
+    height: 380px;
+    border: 0.5px solid rgba(201, 168, 106, 0.35);
+    border-radius: 130px 130px 8px 8px;
+    padding: 10px;
+}
+
+.register-arch-frame-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 120px 120px 4px 4px;
+    overflow: hidden;
+    background: linear-gradient(160deg, #1c1812 0%, #0d0b08 100%);
+}
+
+.register-arch-photo {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/Byeol.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.register-star {
+    color: #C9A86A;
+    font-size: 18px;
+    margin: 28px 0 6px;
+}
+
+.register-brandmark {
+    color: #8A8272;
+    font-size: 13px;
+    letter-spacing: 6px;
+    margin: 0;
+}
+
+.register-form-side {
+    position: relative;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px;
+    max-width: 520px;
+    overflow-y: auto;
+}
+
+.register-kicker {
+    color: #C9A86A;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.register-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 42px;
+    color: #F5F3EF;
+    margin: 0;
+}
+
+.register-divider {
+    width: 48px;
+    height: 1px;
+    background: #C9A86A;
+    margin: 20px 0 32px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-label {
+    color: rgba(245, 243, 239, 0.5);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 16px 0 8px;
+}
+
+.register-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid rgba(245, 243, 239, 0.3);
+    color: #F5F3EF;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 10px 2px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.register-input:focus {
+    border-color: #C9A86A;
+}
+
+.register-input::placeholder {
+    color: rgba(245, 243, 239, 0.3);
+}
+
+.register-button {
+    margin-top: 32px;
+    background: #F5F3EF;
+    border: none;
+    color: #0a0908;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.register-button:hover {
+    background: #d8d4c9;
+}
+
+.register-error {
+    color: #d98a6b;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.register-success {
+    color: #7fd8a3;
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.register-link {
+    background: none;
+    border: none;
+    color: rgba(245, 243, 239, 0.4);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 20px;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.register-link:hover {
+    color: #F5F3EF;
+}
+
+.register-back-link {
+    position: absolute;
+    bottom: 32px;
+    left: 64px;
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .register-page {
+        flex-direction: column;
+    }
+    .register-image-side {
+        min-height: 220px;
+        padding: 24px;
+    }
+    .register-arch-frame {
+        width: 160px;
+        height: 220px;
+    }
+    .register-form-side {
+        padding: 40px 32px;
+        max-width: none;
+    }
+    .register-title {
+        font-size: 32px;
+    }
+    .register-back-link {
+        position: static;
+        margin-top: 20px;
+    }
+}
